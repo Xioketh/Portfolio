@@ -8,18 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="main-header">
-        <div class="container header-content">
-            <div class="logo">Portfo<span>lio.</span></div>
-            <nav>
-                <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header id="main-header">
+    <div class="container header-content">
+        <div class="logo">Portfo<span>lio.</span></div>
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </button>
+        <div class="overlay" id="overlay"></div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <section class="hero">
         <div class="container">
@@ -28,8 +34,7 @@
                 <img src="Assets/profile.png" alt="Your Name" class="profile-image">
                 <div class="hero-content">
                     <h1>Hi, I'm <br><span class="floating">Kethaka J. Ranasinghe</span></h1>
-                    <p>Passionate Java Full-Stack Developer with experience in Angular, Spring Boot, PHP, and Mobile App Development. Skilled in building scalable web applications and business solutions with a focus on performance and efficiency. Enthusiastic about learning AI technologies and exploring their applications in software development. Always eager to expand my knowledge and solve real-world problems through innovative solutions.</p>
-                    
+                    <p>I'm a passionate Java Full-Stack Developer with hands-on experience in Angular, Spring Boot, PHP, Python and Mobile App Development, dedicated to building scalable and high-performance web applications. I bring a strong understanding of DevOps practices, with practical knowledge in Docker, Kubernetes, and AWS CI/CD pipelines, enabling efficient deployment and delivery of software solutions. I'm deeply interested in AI technologies and continuously exploring their integration into modern development workflows. I thrive on solving real-world problems through clean code, smart architecture, and continuous learning.</p>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/kethaka-janadithya-ranasinghe-a73ab7242/" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/Xioketh" target="_blank"><i class="fab fa-github"></i></a>
@@ -48,22 +53,22 @@
 
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-container">
                 <div class="projects-carousel" id="projects-carousel">
-                    <!-- Project 1 -->
+                    <!--  Kapruka Partner Central -->
                     <div class="project-card">
                         <div class="project-img">
                             <i class="fas fa-project-diagram"></i>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">E-Commerce Platform</h3>
-                            <p class="project-description">A full-stack e-commerce solution with payment integration, product management, and user authentication.</p>
+                            <h3 class="project-title">Kapruka Partner Central</h3>
+                            <p class="project-description">A seller central platform built with Spring Boot and Angular, integrated with ERPNext and supporting admin, shipment, orders, and user modules.</p>
                             <div class="tech-tags">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">Stripe API</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">JWT</span>
                             </div>
                             <div class="project-links">
                                 <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
@@ -72,40 +77,19 @@
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-img">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Data Visualization Dashboard</h3>
-                            <p class="project-description">Interactive dashboard for visualizing complex datasets with real-time updates and filtering capabilities.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">D3.js</span>
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Flask</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="#"><i class="fab fa-github"></i> Source Code</a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Project 3 -->
+                    <!-- Sampath POS System -->
                     <div class="project-card">
                         <div class="project-img">
-                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-cash-register"></i>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">AI Chatbot</h3>
-                            <p class="project-description">A conversational AI chatbot integrated with natural language processing and machine learning.</p>
+                            <h3 class="project-title">Sampath POS System</h3>
+                            <p class="project-description">A CLI-based POS system for managing multi-branch sales, generating reports, and tracking product activities with Python and SQLite.</p>
                             <div class="tech-tags">
                                 <span class="tech-tag">Python</span>
-                                <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">NLTK</span>
-                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">Repository Pattern</span>
                             </div>
                             <div class="project-links">
                                 <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
@@ -114,19 +98,39 @@
                         </div>
                     </div>
 
-                    <!-- Project 4 -->
+
+                    <!-- GoMart Inventory System -->
                     <div class="project-card">
                         <div class="project-img">
-                            <i class="fas fa-mobile-alt"></i>
+                            <i class="fas fa-store"></i>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Mobile Fitness App</h3>
-                            <p class="project-description">Cross-platform mobile application for fitness tracking with workout plans and progress analytics.</p>
+                            <h3 class="project-title">GoMart Inventory System</h3>
+                            <p class="project-description">A full-featured inventory management system allowing product purchasing, user and sales management with admin controls.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CityCycle Mobile App -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">CityCycle Mobile App</h3>
+                            <p class="project-description">A React Native-based bike rental system for managing rentals and user profiles with Firebase backend integration.</p>
                             <div class="tech-tags">
                                 <span class="tech-tag">React Native</span>
                                 <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">Redux</span>
-                                <span class="tech-tag">GraphQL</span>
+                                <span class="tech-tag">Mobile App</span>
                             </div>
                             <div class="project-links">
                                 <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
@@ -135,40 +139,41 @@
                         </div>
                     </div>
 
-                    <!-- Project 5 -->
+                    <!-- Kubernetes Demo App -->
                     <div class="project-card">
                         <div class="project-img">
-                            <i class="fas fa-cloud"></i>
+                            <i class="fab fa-docker"></i>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Cloud Storage Service</h3>
-                            <p class="project-description">Secure cloud storage solution with file encryption and sharing capabilities.</p>
+                            <h3 class="project-title">Kubernetes Demo App</h3>
+                            <p class="project-description">A containerized React app deployed on Kubernetes using Docker and Nginx to demonstrate modern DevOps practices.</p>
                             <div class="tech-tags">
-                                <span class="tech-tag">AWS S3</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">React</span>
                                 <span class="tech-tag">Kubernetes</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="#"><i class="fab fa-github"></i> Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 6 -->
-                    <div class="project-card">
-                        <div class="project-img">
-                            <i class="fas fa-code-branch"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">CI/CD Pipeline</h3>
-                            <p class="project-description">Automated deployment pipeline with testing, building, and deployment stages.</p>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Jenkins</span>
                                 <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">Kubernetes</span>
-                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Nginx</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AWS Demo Project -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AWS CI/CD Demo Project</h3>
+                            <p class="project-description">An end-to-end CI/CD pipeline using AWS services to automate build, test, and deployment of a web application hosted on EC2 with GitHub integration.</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">AWS CodeBuild</span>
+                                <span class="tech-tag">AWS CodePipeline</span>
+                                <span class="tech-tag">AWS CodeDeploy</span>
+                                <span class="tech-tag">EC2</span>
+                                <span class="tech-tag">GitHub</span>
                             </div>
                             <div class="project-links">
                                 <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
@@ -190,52 +195,129 @@
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-container">
+                <!-- Frontend -->
                 <div class="skill-category">
                     <h3><i class="fas fa-code"></i> Frontend</h3>
                     <ul class="skill-list">
-                        <li>React.js</li>
                         <li>Angular</li>
-                        <li>Vue.js</li>
+                        <li>React.js</li>
+                        <li>React Native</li>
                         <li>TypeScript</li>
                         <li>HTML5/CSS3</li>
                         <li>Tailwind CSS</li>
                     </ul>
                 </div>
 
+                <!-- Backend -->
                 <div class="skill-category">
                     <h3><i class="fas fa-server"></i> Backend</h3>
                     <ul class="skill-list">
+                        <li>Spring Boot</li>
                         <li>Node.js</li>
-                        <li>Express</li>
+                        <li>PHP</li>
                         <li>Python</li>
-                        <li>Django</li>
-                        <li>Flask</li>
-                        <li>REST APIs</li>
+                        <li>Java</li>
+                        <li>Visual Basic</li>
                     </ul>
                 </div>
 
+                <!-- Database -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <h3><i class="fas fa-database"></i> Database</h3>
                     <ul class="skill-list">
-                        <li>MongoDB</li>
-                        <li>PostgreSQL</li>
                         <li>MySQL</li>
+                        <li>SQLite</li>
                         <li>Firebase</li>
-                        <li>Redis</li>
+                        <li>ERPNext Integration</li>
                     </ul>
                 </div>
 
+                <!-- DevOps & Cloud -->
                 <div class="skill-category">
                     <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
                     <ul class="skill-list">
+                        <li>AWS CodeBuild</li>
+                        <li>AWS CodePipeline</li>
+                        <li>AWS CodeDeploy</li>
+                        <li>AWS EC2</li>
                         <li>Docker</li>
                         <li>Kubernetes</li>
-                        <li>AWS</li>
-                        <li>Azure</li>
-                        <li>CI/CD</li>
-                        <li>Terraform</li>
+                        <li>Nginx</li>
                     </ul>
                 </div>
+
+                <!-- Mobile Development -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                    <ul class="skill-list">
+                        <li>React Native</li>
+                        <li>Android (Java)</li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Testing -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Testing</h3>
+                    <ul class="skill-list">
+                        <li>GitHub</li>
+                        <li>CLI Application Design</li>
+                        <li>Repository Pattern</li>
+                        <li>Unit Testing (test_db_connection)</li>
+                        <li>Agile/Scrum</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Associate Software Engineer</h3>
+                        <h4 class="timeline-subtitle">Kapruka Holdings PLC</h4>
+                        <p class="timeline-date">March 2024 - May 2025</p>
+                        <p class="timeline-description">
+                            Developing and maintaining e-commerce platforms, implementing new features,
+                            and optimizing system performance.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Intern Software Engineer</h3>
+                        <h4 class="timeline-subtitle">Kapruka Holdings PLC</h4>
+                        <p class="timeline-date">September 2023 - March 2024</p>
+                        <p class="timeline-description">
+                            Assisted in development tasks, learned industry best practices,
+                            and contributed to team projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3 class="education-title">Bachelor of Science (Hons) in Computer Science</h3>
+                <h4 class="education-institution">Colombo International Nautical and Engineering College</h4>
+                <p class="education-details">Undergraduate (Top-Up Degree)</p>
+            </div>
+            <div class="education-item">
+                <h3 class="education-title">HND in Information Technology</h3>
+                <h4 class="education-institution">Sri Lanka Institute of Advanced Technological Education</h4>
+                <p class="education-details">2021-2023</p>
+                <p class="education-gpa">GPA: 3.63</p>
+            </div>
+            <div class="education-item">
+                <h3 class="education-title">Secondary Education</h3>
+                <h4 class="education-institution">St. Peter's College Colombo-04 Gampaha Branch</h4>
             </div>
         </div>
     </section>
@@ -246,20 +328,17 @@
             <div class="contact-info">
                 <div class="contact-card">
                     <h3><i class="fas fa-envelope"></i> Email</h3>
-                    <p>For business inquiries</p>
-                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    <a href="mailto:kethakaranasinghe984@gmail.com">kethakaranasinghe984@gmail.com</a>
                 </div>
 
                 <div class="contact-card">
                     <h3><i class="fas fa-phone-alt"></i> Phone</h3>
-                    <p>Available for calls</p>
-                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                    <a href="tel:+94774477984">+94 774477984</a>
                 </div>
 
                 <div class="contact-card">
                     <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
-                    <p>Based in</p>
-                    <p>San Francisco, CA</p>
+                    <p>277/A, Nedagamuwa, Kotugoda</p>
                 </div>
             </div>
         </div>
@@ -267,7 +346,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 [Your Name]. All rights reserved.</p>
+            <p>&copy; 2025 Kethaka J. Ranasinghe.</p>
         </div>
     </footer>
 

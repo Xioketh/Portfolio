@@ -108,11 +108,59 @@ const animateOnScroll = () => {
     });
 };
 
+// Add a test to see if the click is registered
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    console.log('Button clicked');
+});
+
 // Set initial state for animation
 document.querySelectorAll('.project-card, .skill-category, .contact-card').forEach(element => {
     element.style.opacity = '0';
     element.style.transform = 'translateY(20px)';
     element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+});
+
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const navMenu = document.getElementById('nav-menu');
+const overlay = document.getElementById('overlay');
+const menuIcon = document.getElementById('menu-icon');
+
+mobileMenuBtn.addEventListener('click', function() {
+    console.log('Button clicked');
+
+    // Toggle the active class on nav
+    navMenu.classList.toggle('mobile-nav-active');
+
+    // Toggle the overlay
+    overlay.classList.toggle('active');
+
+    // Toggle the menu icon (optional)
+    if (navMenu.classList.contains('mobile-nav-active')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times'); // X icon when menu is open
+    } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars'); // Bars icon when menu is closed
+    }
+});
+
+// Close the menu when clicking on the overlay
+overlay.addEventListener('click', function() {
+    navMenu.classList.remove('mobile-nav-active');
+    overlay.classList.remove('active');
+    menuIcon.classList.remove('fa-times');
+    menuIcon.classList.add('fa-bars');
+});
+
+// Close the menu when clicking on a nav link
+document.querySelectorAll('#nav-menu ul li a').forEach(link => {
+    link.addEventListener('click', function() {
+        navMenu.classList.remove('mobile-nav-active');
+        overlay.classList.remove('active');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+    });
 });
 
 window.addEventListener('scroll', animateOnScroll);

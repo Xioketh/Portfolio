@@ -707,10 +707,29 @@ footer {
     z-index: 1001;
 }
 
+.mobile-menu {
+    display: none; /* Hidden by default */
+}
+
+.mobile-menu.active {
+    display: block; /* Show when active class is added */
+}
+
 /* Mobile Menu Styles */
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--dark);
+        z-index: 1000;
+        /* Additional styling as needed */
     }
 
     nav {
@@ -770,4 +789,16 @@ footer {
         flex-direction: row;
         gap: 1rem;
     }
+}
+
+.nav-menu {
+    display: none; /* Hidden by default */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.nav-menu.active {
+    display: block; /* Show when active class is added */
+    transform: translateX(0);
+
 }
